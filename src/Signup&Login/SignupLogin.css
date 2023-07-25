@@ -1,0 +1,102 @@
+.login__page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* background-color: #6380d1; */
+    background-image: url("D:\client\src\back.jpg") ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.login__main__section{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px dotted; */
+    width: 350px;
+    height: 450px;
+    align-items: center;
+    background-color: #D1DAD1;
+    /* border-radius: 10px; */
+    
+}
+
+.login__email,.login__password{
+    width: 250px;
+    height: 25px;
+    border: none;
+    /* border-bottom: 1px solid black; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 30px
+}
+.login__submit__button{
+    width: 250px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+}
+.signup__button{
+    width: 250px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+}
+label{
+    font-size: 20px;
+}
+.welcome__tag{
+    font-size: 50px;
+    margin-left: 20px;
+    color: black;
+}
+.cart__welcome{
+    margin-top: 10px;
+}
+.login__form{
+    margin-top: 80px;
+}
+
+.input__with__icon {
+    position: relative;
+  }
+  
+  .input__with__icon svg {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .company__logo > img{
+    border-radius: 50%;
+  }
+  .signup__info{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px dotted; */
+    width: 350px;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    background-color: moccasin;
+}
+.company__description{
+    margin-bottom: 25px;
+    margin-top: 40px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+}

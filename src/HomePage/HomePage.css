@@ -1,0 +1,33 @@
+.navbar__full{
+display: flex;
+width: 100vw;
+height: 50px;
+border-bottom: 1px solid black;
+justify-content: space-evenly;
+}
+.search__icon__input {
+    position: relative;
+  }
+  
+  .search__icon__input svg {
+    position: absolute;
+    left: 5px;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+
+.search__input{
+    width: 250px;
+    height: 25px;
+    border: none;
+    /* border-bottom: 1px solid black; */
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    padding-left: 30px
+}
+.list__items{
+    display: flex;
+    width: 100vw;
+    margin-top: 15px;
+    justify-content: space-evenly;
+}
