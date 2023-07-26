@@ -18,7 +18,7 @@ justify-content: space-evenly;
   }
 
 .search__input{
-    width: 300px;
+    width: 500px;
     height: 35px;
     border: none;
     padding-left: 30px;
@@ -41,23 +41,36 @@ justify-content: space-evenly;
 /* Menu for Men */
 .men__menu{
   display: flex;
-  width: 500px;
-  height: 400px;
+  width: 1100px;
+  height: 450px;
   border: 0.5px dotted ;
 }
-.column__one{
-  display: flex;
-  flex-direction: column;
+.men__menu div:nth-child(even){
+  background-color: #F2F2F2;
 }
-.column__two{
-  display: flex;
-  flex-direction: column;
+
+span{
+  font-size: 14px;
+  margin-bottom: 5px;
 }
-.column__three{
+
+.column__one,.column__two,.column__three,.column__four,.column__five{
   display: flex;
   flex-direction: column;
+  width: 220px;
+  padding-left: 20px;
+  /* padding-right: 10px; */
+
 }
 .header__value{
   color: #DC6F6F;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.logo__home{
+  margin-top: -15px;
+}
+.profile__ll,.wishlist__ll,.bag__ll{
+  display: flex;
+  flex-direction: column;
 }
