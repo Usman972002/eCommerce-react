@@ -5,10 +5,12 @@ import { RiLockPasswordLine } from "react-icons/ri"
 import myImage from '../companylogo.jpg';
 import { Link } from 'react-router-dom';
 import './LoginSignUp.css';
+// import backImage from '../back.jpg'
 
 const LoginSignUp = () => {
   return (
     <div className='signup__page'>
+        {/* <img src={backImage} alt='loading' className='backImage'></img>  */}
         <div className='login__info'>
                     <div className='company__logo'>
                         <img src={myImage} alt='loading' width={250}></img>

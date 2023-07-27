@@ -40,7 +40,7 @@ justify-content: space-evenly;
 
 /* Menu for Men */
 .men__menu{
-  display: flex;
+  display: none;
   width: 1100px;
   height: 450px;
   border: 0.5px dotted ;
@@ -74,3 +74,34 @@ span{
   display: flex;
   flex-direction: column;
 }
+
+hr{
+  height: 1.5px;
+  width: 150px;
+  background-color: #c1bbbb;
+  border: none;
+  margin-left: 0px;
+}
+/* Initially hide the .men__menu */
+.men__menu {
+  display: none;
+}
+
+/* Show .men__menu when hovering over .navbar__full */
+/* .navbar__full:hover + .men__menu {
+  display: flex;
+} */
+
+
+
+.men__menu {
+  display: none;
+}
+
+/* Show .men__menu when hovering over .navbar__full */
+.navbar__full:hover + .men__menu {
+  display: flex;
+}
+
+
+

@@ -2,11 +2,9 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
-    /* background-color: #6380d1; */
-    background-image: url("C:\Users\usman\OneDrive\Documents\GitHub\eCommerce-react\src\back.jpg") ;
+    background-image: url("../back.jpg") ;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,9 +13,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    /* opacity: 0.9;  */
-    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
+/* .signup__page > img {
+    width: 100vw;
+    height: 100vh;
+    filter: blur(5px);
+} */
 .signup__main__section{
     display: flex;
     flex-direction: column;

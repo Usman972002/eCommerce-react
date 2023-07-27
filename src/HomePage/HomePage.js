@@ -12,7 +12,7 @@ const HomePage = () => {
             <div className='navbar__full'>
                 <div className='list__items'>
                     <div className='logo__home'><img src={logo} alt='loading' width={50} height={50}></img></div>
-                    <div>Men</div>
+                    <div className='men__hover'>Men</div>
                     <div>Women</div>
                     <div>Kids</div>
                     <div>Electronics</div>
@@ -50,7 +50,7 @@ const HomePage = () => {
                     <span>Suits</span>
                     <span>Rain Jackets</span>
 
-
+                    <hr></hr>
                     <span className='header__value'><b>Indian & Festive Wear</b></span>
                     <span>Kurtas & Kurta Sets</span>
                     <span>Sherwanis</span>
@@ -65,13 +65,15 @@ const HomePage = () => {
                     <span>Shorts</span>
                     <span>Track Pants & Joggers</span>
 
-
+                    <hr></hr>
                     <span className='header__value'><b>Innerwear & Sleepwear</b></span>
                     <span>Brief & Trunks</span>
                     <span>Boxers</span>
                     <span>Vests</span>
                     <span>Sleepwear & Loungewear</span>
                     <span>Thermals</span>
+                    <hr></hr>
+                    <span className='header__value'><b>Plus Size</b></span>
 
                 </div>
                 <div className='column__three'>
@@ -83,6 +85,7 @@ const HomePage = () => {
                     <span>Sandals & Floaters </span>
                     <span>Flip Flops</span>
                     <span>Socks</span>
+                    <hr></hr>
                     <span className='header__value'><b>Personal Care & Grooming</b></span>
                     <span className='header__value'><b>Sunglasses & Frames</b></span>
                     <span className='header__value'><b>Watches</b></span>
@@ -98,7 +101,7 @@ const HomePage = () => {
                     <span>Jackets & Sweatshirts</span>
                     <span>Sports Accessories</span>
                     <span>Swimwear</span>
-
+                    <hr></hr>
                     <span className='header__value'><b>Gadgets</b></span>
                     <span>Smart Warables</span>
                     <span>Fitness Gadgets</span>
@@ -120,7 +123,7 @@ const HomePage = () => {
                     <span>Phone Cases</span>
                     <span>Rings & Wristwear</span>
                     <span>Helmets</span>
-
+                    <hr></hr>
                     <span className='header__value'><b>Bags & Backpacks</b></span>
                     <span className='header__value'><b>Luggages & Trolleys</b></span>
                 </div>
