@@ -2,7 +2,7 @@
 display: flex;
 width: 100vw;
 height: 70px;
-border-bottom: 1px solid black;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 justify-content: space-evenly;
 }
 .search__icon__input {
@@ -36,18 +36,34 @@ justify-content: space-evenly;
     width: 100vw;
     margin-top: 25px;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 
-/* Menu for Men */
-.men__menu{
+/* Menu */
+.men__menu,.women__menu,.kids__menu,.bty__menu,.hl__menu{
   display: none;
+  position: absolute;
+  top: 70px;
+  left: 110px;
   width: 1100px;
   height: 450px;
-  border: 0.5px dotted ;
 }
-.men__menu div:nth-child(even){
+.men__menu div:nth-child(even),.women__menu div:nth-child(even),.kids__menu div:nth-child(even),.bty__menu div:nth-child(even),.hl__menu div:nth-child(even){
   background-color: #F2F2F2;
 }
+.men__hover:hover + .men__menu, .women__hover:hover + .women__menu , .kids__hover:hover + .kids__menu ,.bty__hover:hover + .bty__menu, .hl__hover:hover + .hl__menu{
+  display: flex;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: white;
+}
+.men__menu:hover,.women__menu:hover,.kids__menu:hover,.bty__menu:hover,.hl__menu:hover{
+  display: flex;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: white;
+}
+
 
 span{
   font-size: 14px;
@@ -59,8 +75,6 @@ span{
   flex-direction: column;
   width: 220px;
   padding-left: 20px;
-  /* padding-right: 10px; */
-
 }
 .header__value{
   color: #DC6F6F;
@@ -73,6 +87,9 @@ span{
 .profile__ll,.wishlist__ll,.bag__ll{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
 }
 
 hr{
@@ -82,26 +99,4 @@ hr{
   border: none;
   margin-left: 0px;
 }
-/* Initially hide the .men__menu */
-.men__menu {
-  display: none;
-}
-
-/* Show .men__menu when hovering over .navbar__full */
-/* .navbar__full:hover + .men__menu {
-  display: flex;
-} */
-
-
-
-.men__menu {
-  display: none;
-}
-
-/* Show .men__menu when hovering over .navbar__full */
-.navbar__full:hover + .men__menu {
-  display: flex;
-}
-
-
 
