@@ -18,7 +18,7 @@ const HomePage = () => {
                         <img src={logo} alt='loading' width={50} height={50}></img>
                         </Link>
                         </div>
-                    <div className='men__hover'>Men</div>
+                    <div className='men__hover' style={{borderBottomColor:"red"}}>Men</div>
                     <div className='men__menu'>
                         <div className='column__one'>
                             <span className='header__value'><b>Topwear</b></span>
