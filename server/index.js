@@ -1,38 +1,27 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-// const mongodb = require("mongoose");
-
+const {MongoClient} = require("mongodb")
 app.use(cors());
 app.use(express.json());
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://Usman:Usman@123@cluster0.sqnqw3z.mongodb.net/?retryWrites=true&w=majority";
-
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-serverApi: {
-version: ServerApiVersion.v1,
-strict: true,
-deprecationErrors: true,
+async function main(){
+  const uri = "mongodb+srv://Usman:Usman123@cluster0.sqnqw3z.mongodb.net/?retryWrites=true&w=majority";
+  const client = new MongoClient(uri);
+  try {
+      // Connect to the MongoDB cluster
+      await client.connect();
+      console.log("Connected")
+      // Make the appropriate DB calls
+      // await  listDatabases(client);
+  } catch (e) {
+      console.error(e);
+  } finally {
+      await client.close();
+  }
 }
-});
 
-async function run() {
-try {
-// Connect the client to the server (optional starting in v4.7)
-await client.connect();
-// Send a ping to confirm a successful connection
-await client.db("admin").command({ ping: 1 });
-console.log("Pinged your deployment. You successfully connected to MongoDB!");
-} finally {
-// Ensures that the client will close when you finish/error
-await client.close();
-}
-}
-run().catch(console.dir);
-
+main().catch(console.error);
 
 //Listening to port
 app.listen(5000, () => {
