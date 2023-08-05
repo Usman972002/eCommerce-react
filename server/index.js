@@ -1,29 +1,44 @@
-const express = require("express");
+const express = require('express');
+const { MongoClient} = require('mongodb');
 const app = express();
-const cors = require("cors");
-const {MongoClient} = require("mongodb")
-app.use(cors());
+const port = 4000;
 app.use(express.json());
+require('dotenv').config();
 
-async function main(){
-  const uri = "mongodb+srv://Usman:Usman123@cluster0.sqnqw3z.mongodb.net/?retryWrites=true&w=majority";
-  const client = new MongoClient(uri);
+const uri = process.env.MONGODB_URI;
+const client = new MongoClient(uri);
+
+async function connectToDatabase() {
   try {
-      // Connect to the MongoDB cluster
-      await client.connect();
-      console.log("Connected")
-      // Make the appropriate DB calls
-      // await  listDatabases(client);
-  } catch (e) {
-      console.error(e);
-  } finally {
-      await client.close();
+    await client.connect();
+    console.log("Connected to the database");
+  } catch (error) {
+    console.error("Error connecting to the database:", error);
   }
 }
 
-main().catch(console.error);
+connectToDatabase();
 
-//Listening to port
-app.listen(5000, () => {
-  console.log("Connected to Backend!");
+// Define routes here
+app.get('/posts',async(req,res)=>{
+  try{
+    const posts = await client.db('newDb').collection('posts').find({}).toArray();
+    res.status(200).json(posts);
+  }catch(error){
+    res.status(500).json({error:"Error Fetching Data"});
+  }
+})
+
+app.post('/addPost',async(req,res)=>{
+  const store = req.body
+  try{
+    const addedpost = await client.db('newDb').collection('posts').insertOne(store);
+    res.status(200).json(addedpost);
+  }catch(error){
+    res.status(500).json({error:"The insrtion has been failed"});
+  }
+})
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
